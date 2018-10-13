@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "mixins";
+
+/* base css */
+html {
+  background: none;
+  overflow-y: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #656c70;
+  background-image: url("../img/settings_bg.png");
+  background-size: 125px 125px;
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+//Main page sytling
+.main {
+  padding: 0;
+  overflow-y: scroll;
+  height: 100vh;
+
+  .page-header {
+    text-align: left;
+    color: #787878;
+    margin-top: 0px;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    padding-left: 5%;
+    padding-top: 13px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+  }
+}

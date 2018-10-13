@@ -1,0 +1,35 @@
+body {
+  background-image: url("../img/d4d.png");
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.row {
+  margin: 1rem;
+}
+
+.login-box {
+  border-radius: 10px;
+  opacity: 0.9;
+  background: white;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  text-shadow: 1px 1px grey;
+  padding-left: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+
+h1 {
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 40px;
+  text-align: center;
+}

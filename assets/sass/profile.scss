@@ -1,0 +1,182 @@
+body {
+	font-weight: 300;
+	font-family: 'Avenir', sans-serif;
+	margin:0;
+  padding:0;
+  background-image: url("../img/profile/Background.png");
+}
+
+h1 {
+	color:white;
+	font-size:62px;
+	text-align:center;
+	font-weight:700;
+	margin:0;
+}
+
+h2 {
+	font-family: 'Avenir-Heavy';
+	color:white;
+	font-size:30px;
+	text-align:left;
+	font-weight:300;
+	float:left;
+	margin:0;
+}
+
+
+h3 {
+	color:black;
+	font-size:32px;
+	text-align:left;
+	font-weight:500;
+	margin:0;
+}
+
+br {
+   display: block;
+   margin: 5px 0;
+	 line-height: 20px;
+}
+
+/* Div */
+
+div {
+  color:black;
+	font-size: 32px;
+	text-align: left;
+	font-weight: 300;
+}
+
+div.topBar {
+	background: #ffffff;
+}
+
+div.profileArea {
+	color:white;
+	float:left;
+	margin-top: 50px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+div.argumentsList {
+	margin-top: 120px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.nameFont {
+	font-size: 40px;
+	color:white;
+}
+
+.descriptionFont {
+	font-size: 18px;
+	color:white;
+	text-align: left;
+}
+
+
+
+
+
+/* Tables */
+
+table, th, td {
+    border: 1px solid black;
+		border-collapse: collapse;
+}
+
+table {
+	width: 100%;
+	background-color: #ffffff85;
+	border-collapse: collapse;
+  border-radius: 12px;
+   border-style: hidden;
+  box-shadow: 0 0 0 1px #444;
+}
+
+th {
+    text-align: left;
+}
+
+td.red {
+	color: #FF0000;
+}
+
+td.yellow {
+	color: #F8E71C;
+}
+
+td.green {
+	color: #6DE868;
+}
+
+th, td {
+    padding: 15px;
+}
+
+
+/* Paragraphs */
+
+p {
+	color:white;
+	font-size: 36px;
+	line-height: 150%;
+	margin:0;
+	text-align: center;
+}
+
+p.general {
+	color:black;
+	font-size: 64px;
+	line-height: 150%;
+	margin:0;
+	text-align: left;
+}
+
+/* Links */
+
+a.general, a.general:link, a.general:visited {
+	color:white;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+a.titleLink {
+	font-size: 36px;
+	color:black;
+	text-align:left;
+	padding-left: 0px;
+	text-decoration: none;
+}
+
+a.titleLink:hover {
+	text-decoration: underline;
+}
+
+/* Images  */
+
+img.nav {
+	height: 32px;
+	width : 32px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+img.trophy {
+	height:65px;
+	width:48px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+img.userThumbnail {
+	height: 100px;
+	width : 100px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
