@@ -11,7 +11,7 @@ client = vision.ImageAnnotatorClient()
 # The name of the image file to annotate
 file_name = os.path.join(
     os.path.dirname(__file__),
-    'image.png')
+    'dogandcat.jpg')
 
 # Loads the image into memory
 with io.open(file_name, 'rb') as image_file:
@@ -26,8 +26,9 @@ labels = response.label_annotations
 def is_doggo(labels):
     print('Labels:')
     for label in labels:
-        if label == "dog":
+        if label.description == "dog":
             return "DOGGO"
     return "no doggo"
 
 print (is_doggo(labels))
+
