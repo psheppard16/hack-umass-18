@@ -144,22 +144,8 @@ Run specific tests:
 $ driver=[driver] REMOTE_USER=admin python manage.py --keepdb testing.[test file].[test class].[test]
 ```
 
-### Anaconda Install ###
+### Install AI Libraries ###
 ```sh
-$ wget -c https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-$ bash Anaconda3-5.0.1-Linux-x86_64.sh
-
-$ export PATH=/home/vagrant/anaconda3/bin:$PATH
-$ conda update --prefix /home/vagrant/anaconda3 anaconda
-
-Create Anaconda Environment
-$ conda create -n retinanet python=3.6 anaconda
-
-Activate Environment and install packages
-$ source activate retinanet
-$ conda install tensorflow numpy scipy opencv pillow matplotlib h5py keras
-
-$ pip install --upgrade pip
 
 Install ImageAI Library
 $ pip install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl
