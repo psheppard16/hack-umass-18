@@ -4,7 +4,7 @@
 ```sh
 Clone and enter repo:
 $ git clone https://github.com/psheppard16/hack-umass-18
-$ cd web-stack
+$ cd hack-umass-18
 ```
 
 ##### Configuring and starting vagrant
