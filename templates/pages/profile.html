@@ -1,0 +1,84 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+    <title> {{ title }} - Argue </title>
+
+    {# load the icons, styles, and scripts from head #}
+    {% include "shared/head.html" %}
+    <link rel="stylesheet" href="{%static 'css/profile.css' %}">
+</head>
+
+<body>
+<div class="topBar" style="height: 56px">
+    <span style="float:left; padding-left: 20px; padding-top: 12px;" class="topBar">
+      <h3> Change My Mind </h3>
+    </span>
+    <span style="float:right; display:inline-block; padding-top: 12px; padding-right: 10px" class="topBar">
+      <a class="general" href=""><img class="nav" src="../../assets/img/profile/Settings.png"></a>
+      <a class="general" href=""><img class="nav" src="../../assets/img/profile/Logout.png"></a>
+    </span>​
+</div>
+
+
+<div class="profileArea">
+
+
+    <a class="general" href="" style="float:left;">
+        <img class="userThumbnail" src="../../assets/img/profile/Thumbnail.png" align="top">
+    </a>
+
+    <span class="nameFont">
+      <b> Mark </b> Disler
+      <img class="trophy" src="../../assets/img/profile/RedTrophy.png" align="top">
+      <img class="trophy" src="../../assets/img/profile/GreenTrophy.png" align="top">
+    </span>
+
+    <br>
+
+    <p class="descriptionFont" style="width:1000px;">
+        20. Student. iOS Developer. Master arguer.
+    </p>
+
+    <br>
+
+
+</div>
+
+
+<div class="argumentsList">
+
+    <br>
+    <br>
+    <h2 style="float:left; padding-bottom: 10px"> Recent Arguments </h2>
+    <br>
+
+    <table>
+        <tr>
+            <th> Arguers</th>
+            <th> Date</th>
+            <th> Outcome</th>
+        </tr>
+        <tr>
+            <td> "Mark" vs. "The Meme"</td>
+            <td> Sept 20, 2018</td>
+            <td class="red"> Inconclusive</td>
+        </tr>
+        <tr>
+            <td> "Mark" vs. "Preston"</td>
+            <td> Sept 20, 2018</td>
+            <td class="yellow"> Resigned</td>
+        </tr>
+        <tr>
+            <td> "Mark" vs. "Thomas"</td>
+            <td> Sept 20, 2018</td>
+            <td class="green"> Won</td>
+        </tr>
+    </table>
+
+</div>
+
+
+</body>
+
+</html>

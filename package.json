@@ -1,0 +1,41 @@
+{
+  "name": "argue",
+  "version": "0.0.0",
+  "description": "Arguement website for the class 326",
+  "repository": "https://github.com/thomask156/326_project.git",
+  "author": "Preston Sheppard",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^1.0.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eol": "^0.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.0.0",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-slider": "^10.0.0",
+    "chart.js": "^2.7.1",
+    "chosen-js": "^1.8.3",
+    "glyphicons": "^0.2.0",
+    "jquery": "^3.2.1",
+    "moment": "^2.21.0",
+    "moment-timezone": "^0.5.11",
+    "noty": "^3.2.0-beta",
+    "npm-git-install": "^0.3.0",
+    "popper.js": "^1.12.9",
+    "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
+    "font-awesome": "^4.7.0"
+  }
+}

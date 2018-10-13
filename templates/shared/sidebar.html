@@ -1,0 +1,33 @@
+<ul class="nav nav-sidebar">
+    <li class="sidebar_header">Menu</li>
+    <li {% if 'home' in request.path %} class="active" {% endif %}>
+            <a href="{% url 'home' %}">
+            <table>
+                <tr>
+                    <td class="navIcon"><div class="icon iconAct argue"></div></td>
+                    <td class="navText">Arguements</td>
+                </tr>
+            </table>
+        </a>
+    </li>
+    <li {% if 'none' in request.path %} class="active" {% endif %}>
+        <a href="{% url 'home' %}">
+            <table>
+                <tr>
+                    <td class="navIcon"><div class="icon schedule"></div></td>
+                    <td class="navText">None</td>
+                </tr>
+            </table>
+        </a>
+    </li>
+    <li {% if 'none' in request.path %} class="active" {% endif %}>
+        <a href="{% url 'home' %}">
+            <table>
+                <tr>
+                    <td class="navIcon"><div class="icon policies"></div></td>
+                    <td class="navText">None</td>
+                </tr>
+            </table>
+        </a>
+    </li>
+</ul>
