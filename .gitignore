@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Personal ignores
+.idea/
+.vagrant/
+node_modules/
+static/
