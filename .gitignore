@@ -108,3 +108,4 @@ venv.bak/
 .vagrant/
 node_modules/
 static/
+settings_secret.py
