@@ -111,7 +111,7 @@ $ python manage.py configure_dog
 Run the django site:
 $ source .venv/bin/activate
 $ python3 manage.py runserver 0.0.0.0:8000
-
+Go to 127.0.0.1:8000 to access the site
 ```
 
 ### Documentation
