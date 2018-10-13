@@ -31,6 +31,7 @@ $ cd /vagrant
 ```
 
 ##### Install Dependencies
+#### Base Dependencies
 ```sh
 Update apt-get:
 $ sudo apt-get update
@@ -77,6 +78,11 @@ $ sudo gulp (`sudo gulp watch` for continuous collection)
 
 Collect static resources for admin site:
 $ sudo python3 manage.py collectstatic
+```
+
+#### Project Dependencies
+```sh
+$ sudo apt-get install freecad
 ```
 
 ##### Database Setup
