@@ -77,10 +77,6 @@ $ gulp (`gulp watch` for continuous collection)
 
 Collect static resources for admin site:
 $ python manage.py collectstatic
-
-Run the django site:
-$ source .venv/bin/activate
-$ python3 manage.py runserver 0.0.0.0:8000
 ```
 
 ##### Database Setup
@@ -105,6 +101,16 @@ $ python manage.py createsuperuser
 
 Populate database with default models:
 $ python manage.py configure_dog
+
+```
+
+
+##### Running the django web server
+##### Run the server
+```sh
+Run the django site:
+$ source .venv/bin/activate
+$ python3 manage.py runserver 0.0.0.0:8000
 
 ```
 
