@@ -73,10 +73,10 @@ Enter random characters for the 'SECRET_KEY' in `settings_secret.py`:
 SECRET_KEY='super random characters'
 
 Collect static resources for main site:
-$ gulp (`gulp watch` for continuous collection)
+$ sudo gulp (`sudo gulp watch` for continuous collection)
 
 Collect static resources for admin site:
-$ python manage.py collectstatic
+$ sudo python3 manage.py collectstatic
 ```
 
 ##### Database Setup
