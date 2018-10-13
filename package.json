@@ -1,7 +1,7 @@
 {
-  "name": "argue",
+  "name": "placeholder",
   "version": "0.0.0",
-  "description": "Arguement website for the class 326",
+  "description": "basic django webstack",
   "repository": "https://github.com/thomask156/326_project.git",
   "author": "Preston Sheppard",
   "license": "ISC",

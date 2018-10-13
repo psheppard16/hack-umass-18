@@ -1,22 +1,10 @@
-# COMPSCI 326 Web Programming
-
-This is the project repository template that your COMPSCI 326 team
-will `fork` and use to begin your semester project work. Please follow
-the instructions carefully in each of the project submission
-requirements for your team to be successful. This is the structure of
-this repository:
-
-* `docs` - this folder is used to store all documents that are
-  requested as part of the submission.
-* `src` - this folder is used for your project code.
-
 ### Configuration ###
 
 ##### Clone and Setup Repository
 ```sh
 Clone and enter repo:
-$ git clone https://github.com/thomask156/326_project.git
-$ cd 326_project
+$ git clone https://github.com/psheppard16/web-stack
+$ cd web-stack
 ```
 
 ##### Configuring and starting vagrant
@@ -80,7 +68,7 @@ On windows:
     $ npm rebuild node-sass --no-bin-links
 
 Create settings_secret.py using template:
-$ cp argue/settings_secret.py.template argue/settings_secret.py
+$ cp placeholder/settings_secret.py.template placeholder/settings_secret.py
 
 Enter random characters for the 'SECRET_KEY' in `settings_secret.py`:
 SECRET_KEY='super random characters'
@@ -118,7 +106,7 @@ Create a super user:
 $ python manage.py createsuperuser
 
 Populate database with default models:
-$ python manage.py configure_argue
+$ python manage.py configure_placeholder
 
 ```
 
