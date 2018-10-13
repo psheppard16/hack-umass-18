@@ -1,7 +1,7 @@
 import os
 import sys
 import logging
-from placeholder.settings import BASE_DIR
+from dog.settings import BASE_DIR
 
 # copy to settings_secret.py and generate secret key
 SECRET_KEY='JM291MFHAFMA82KFM'

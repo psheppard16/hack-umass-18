@@ -1,16 +1,16 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 
-from placeholder_app.models import *
-from placeholder_app.forms import *
-from placeholder_app.serializers import *
+from dog_app.models import *
+from dog_app.forms import *
+from dog_app.serializers import *
 from django.urls import reverse
 
 import logging
-log = logging.getLogger('placeholder')
+log = logging.getLogger('dog')
 
 ###########################################################################
-#                             Placeholder VIEWS                           #
+#                             Dog VIEWS                           #
 #                                                                         #
 ###########################################################################
 

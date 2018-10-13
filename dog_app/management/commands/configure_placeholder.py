@@ -1,17 +1,17 @@
 from django.core.management.base import BaseCommand, CommandError
-from placeholder_app.models import *
+from dog_app.models import *
 
 import logging
 from django.utils import timezone
 
-log = logging.getLogger('placeholder')
+log = logging.getLogger('dog')
 
 
 class Command(BaseCommand):
-    help = 'Configures models for the placeholder application.'
+    help = 'Configures models for the dog application.'
 
     def handle(self, *args, **options):
-        """Adds default entries for the placeholder app.
+        """Adds default entries for the dog app.
             :returns: None
             """
 

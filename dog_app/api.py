@@ -1,5 +1,5 @@
 from rest_framework import viewsets, filters, generics, permissions
-from placeholder_app.serializers import *
+from dog_app.serializers import *
 
 
 ###########################################################################

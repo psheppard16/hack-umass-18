@@ -3,7 +3,7 @@
 ##### Clone and Setup Repository
 ```sh
 Clone and enter repo:
-$ git clone https://github.com/psheppard16/web-stack
+$ git clone https://github.com/psheppard16/hack-umass-18
 $ cd web-stack
 ```
 
@@ -67,7 +67,7 @@ On windows:
     $ npm rebuild node-sass --no-bin-links
 
 Create settings_secret.py using template:
-$ cp placeholder/settings_secret.py.template placeholder/settings_secret.py
+$ cp dog/settings_secret.py.template dog/settings_secret.py
 
 Enter random characters for the 'SECRET_KEY' in `settings_secret.py`:
 SECRET_KEY='super random characters'
@@ -104,7 +104,7 @@ Create a super user:
 $ python manage.py createsuperuser
 
 Populate database with default models:
-$ python manage.py configure_placeholder
+$ python manage.py configure_dog
 
 ```
 

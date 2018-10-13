@@ -1,5 +1,5 @@
 from django.contrib import admin
-from placeholder_app.models import *
+from dog_app.models import *
 from import_export.admin import ImportExportModelAdmin, ImportExportActionModelAdmin
 
 # class DataAdmin(ImportExportModelAdmin, ImportExportActionModelAdmin):
