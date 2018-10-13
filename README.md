@@ -30,8 +30,7 @@ Navigating to the project:
 $ cd /vagrant
 ```
 
-##### Install Dependencies
-#### Base Dependencies
+##### Base Dependencies
 ```sh
 Update apt-get:
 $ sudo apt-get update
@@ -80,7 +79,7 @@ Collect static resources for admin site:
 $ sudo python3 manage.py collectstatic
 ```
 
-#### Project Dependencies
+##### Project Dependencies
 ```sh
 $ sudo apt-get install freecad
 ```
