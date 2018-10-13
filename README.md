@@ -79,8 +79,8 @@ Collect static resources for admin site:
 $ python manage.py collectstatic
 
 Run the django site:
-source .venv/bin/activate
-python3 manage.py runserver 0.0.0.0:8000
+$ source .venv/bin/activate
+$ python3 manage.py runserver 0.0.0.0:8000
 ```
 
 ##### Database Setup
