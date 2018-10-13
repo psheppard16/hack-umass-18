@@ -145,7 +145,7 @@ $ driver=[driver] REMOTE_USER=admin python manage.py --keepdb testing.[test file
 ```
 
 ### Anaconda Install ###
-
+```sh
 $ wget -c https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 $ bash Anaconda3-5.0.1-Linux-x86_64.sh
 
@@ -171,4 +171,4 @@ copy this file^ to your working folder
 also download this:
 https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/06/I1_2009_09_08_drive_0012_001351-768x223.png
 this is just a test image, and name it image.png
-
+```
