@@ -44,7 +44,6 @@ $ virtualenv --always-copy .venv
 $ source .venv/bin/activate
 
 Install pip requirements:
-$ cd src
 $ pip3 install -r requirements.txt
 
 Install node:
@@ -81,7 +80,6 @@ $ python manage.py collectstatic
 
 Run the django site:
 source .venv/bin/activate
-cd src
 python3 manage.py runserver 0.0.0.0:8000
 ```
 
