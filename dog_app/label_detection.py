@@ -101,4 +101,5 @@ def run_doggo_detection(path):
     else:
         print("Color name:", closest_name)
 
+
 run_doggo_detection("doggo_grass.jpg")
