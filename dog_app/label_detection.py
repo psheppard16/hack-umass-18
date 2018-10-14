@@ -38,7 +38,9 @@ def is_doggo(labels):
 # this function takes the RGB value given from Google API and gives an approximate color in English
 # such as "red", "cyan" or "navy blue"
 def get_color_name(requested_color):
-    def closest_color(requested_color):
+    try:
+        closest_name = actual_name = webcolors.rgb_to_name(requested_color)
+    except ValueError:
         min_colors = {}
         for key, name in webcolors.css3_hex_to_names.items():
             r_c, g_c, b_c = webcolors.hex_to_rgb(key)
@@ -46,11 +48,7 @@ def get_color_name(requested_color):
             gd = (g_c - requested_color[1]) ** 2
             bd = (b_c - requested_color[2]) ** 2
             min_colors[(rd + gd + bd)] = name
-        return min_colors[min(min_colors.keys())]
-    try:
-        closest_name = actual_name = webcolors.rgb_to_name(requested_color)
-    except ValueError:
-        closest_name = closest_color(requested_color)
+        closest_name = min_colors[min(min_colors.keys())]
         actual_name = None
     return actual_name, closest_name
 
