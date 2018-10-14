@@ -30,7 +30,7 @@ Navigating to the project:
 $ cd /vagrant
 ```
 
-##### Install Dependencies
+##### Base Dependencies
 ```sh
 Update apt-get:
 $ sudo apt-get update
@@ -45,6 +45,7 @@ $ source .venv/bin/activate
 
 Install pip requirements:
 $ pip3 install -r requirements.txt
+$ pip3 install tensorflow
 
 Install node:
 $ curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
@@ -77,6 +78,11 @@ $ sudo gulp (`sudo gulp watch` for continuous collection)
 
 Collect static resources for admin site:
 $ sudo python3 manage.py collectstatic
+```
+
+##### Project Dependencies
+```sh
+$ sudo apt-get install freecad
 ```
 
 ##### Database Setup
@@ -137,4 +143,19 @@ $ driver=chrome REMOTE_USER=admin python manage.py --keepdb
 
 Run specific tests: 
 $ driver=[driver] REMOTE_USER=admin python manage.py --keepdb testing.[test file].[test class].[test]
+```
+
+### Install AI Libraries ###
+```sh
+
+Install ImageAI Library
+$ pip install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl
+
+download this:
+https://github.com/OlafenwaMoses/ImageAI/releases/download/1.0/resnet50_coco_best_v2.0.1.h5
+copy this file^ to your working folder
+
+also download this:
+https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/06/I1_2009_09_08_drive_0012_001351-768x223.png
+this is just a test image, and name it image.png
 ```
