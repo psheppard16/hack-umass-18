@@ -19,7 +19,6 @@ dog_api_patterns = [
 ]
 
 urlpatterns = [
-    url(r'^home/', HomeView, name="home"),
-    url(r'^basic-upload/$', views.BasicUploadView.as_view(), name='basic_upload'),
+    url(r'^home/', BasicUploadView, name="basic_upload"),
 ]
 
