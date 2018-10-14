@@ -25,8 +25,8 @@ response = client.label_detection(image=image)
 labels = response.label_annotations
 
 
-# checks if there is a dog in the image
-# returns DOGGO if there is a dog in the image and "No :(" if there isn't
+#checks if there is a dog in the image
+#returns DOGGO if there is a dog in the image and "No :(" if there isn't
 def is_doggo(labels):
     print('Labels:')
     for label in labels:
@@ -102,6 +102,7 @@ def run_doggo_detection(path):
         print("Color name:", closest_name)
 
 
+<<<<<<< HEAD
 file_pic = "doggo.jpg"
 run_doggo_detection(file_pic)
 
@@ -119,3 +120,73 @@ run_doggo_detection(file_pic)
 #     plt.show()
 #
 # pic_show(file_pic)
+=======
+
+
+#this function takes the RGB value given from Google API and gives an approximate colour in English
+#such as "red", "cyan" or "navy blue"
+def get_colour_name(requested_colour):
+    def closest_colour(requested_colour):
+        min_colours = {}
+        for key, name in webcolors.css3_hex_to_names.items():
+            r_c, g_c, b_c = webcolors.hex_to_rgb(key)
+            rd = (r_c - requested_colour[0]) ** 2
+            gd = (g_c - requested_colour[1]) ** 2
+            bd = (b_c - requested_colour[2]) ** 2
+            min_colours[(rd + gd + bd)] = name
+        return min_colours[min(min_colours.keys())]
+    try:
+        closest_name = actual_name = webcolors.rgb_to_name(requested_colour)
+    except ValueError:
+        closest_name = closest_colour(requested_colour)
+        actual_name = None
+    return actual_name, closest_name
+
+#returns the RGB values of the colour with the highest fraction, meaning the colour that shows up the most in the image
+def detect_properties(path):
+    """Detects image properties in the file."""
+    from google.cloud import vision
+    client = vision.ImageAnnotatorClient()
+
+    with io.open(path, 'rb') as image_file:
+        content = image_file.read()
+
+    image = vision.types.Image(content=content)
+
+    response = client.image_properties(image=image)
+    props = response.image_properties_annotation
+    print('Properties:')
+    maxi = -10
+    max_red = 0
+    max_green = 0
+    max_blue = 0
+    #all of the values of the fraction should be from 0-1.0
+    #setting maximum to 10 guaruntees that the maximum will be found in the array of props.dominant_color.colors
+
+    for color in props.dominant_colors.colors:
+        if color.pixel_fraction > maxi:
+            maxi = color.pixel_fraction
+            max_red = color.color.red
+            max_green = color.color.green
+            max_blue = color.color.blue
+    return max_red, max_green, max_blue
+        # print('fraction: {}'.format(color.pixel_fraction))
+        # print('\tr: {}'.format(color.color.red))
+        # print('\tg: {}'.format(color.color.green))
+        # print('\tb: {}'.format(color.color.blue))
+        # print('\ta: {}'.format(color.color.alpha))
+    #print("\nThis is maximum: {} {} {} {}\n".format(maxi, max_red, max_green, max_blue))
+
+#main function that takes the name of the image and runs all the analysis :) is it a dog? find out!
+def run_doggo_detection(path):
+    red, green, blue = detect_properties(path)
+    requested_colour = (red, green, blue)
+    actual_name, closest_name = get_colour_name(requested_colour)
+
+    print("Is your doggo a doggo? {}".format(is_doggo(labels)))
+    if actual_name != None:
+        print("Actual colour name:", actual_name, ", or:", closest_name)
+    else:
+        print("Colour name:", closest_name)
+
+>>>>>>> 04a576673d3c9f127ab4f7830bd677d148e7f6ab

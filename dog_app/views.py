@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 
 from dog_app.models import *
+from django.http import JsonResponse
 from dog_app.forms import *
 from dog_app.serializers import *
 from django.urls import reverse
@@ -24,15 +25,12 @@ def HomeView(request):
     return render(request, 'pages/home.html', context)
 
 
-
-
-class BasicUploadView(View):
-    def get(self, request):
+def BasicUploadView(request):
+    if request.GET:
         photos_list = Photo.objects.all()
-        return render(self.request, 'photos/basic_upload/index.html', {'photos': photos_list})
-
-    def post(self, request):
-        form = PhotoForm(self.request.POST, self.request.FILES)
+        return render(request, 'pages/home.html', {'photos': photos_list})
+    else:
+        form = PhotoForm(request.POST, request.FILES)
         if form.is_valid():
             photo = form.save()
             data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url}
