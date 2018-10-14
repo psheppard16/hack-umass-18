@@ -110,3 +110,4 @@ node_modules/
 static/
 settings_secret.py
 media/
+dog_app/credentials.json
