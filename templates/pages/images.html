@@ -2,12 +2,12 @@
 
 
 {% block content %}
-    <h1><a href="{% url 'home' %}">Multiuploader</a></h1>
+    <h1><a href="{% url 'home' %}">Uploader</a></h1>
     <br />
     <h2>Images:</h2>
     <div class="photos">
-    {% for item in items %}
-        <img src="{{ item.url }}">
+    {% for photo in photos %}
+        <img src="{{ photo.url }}">
     {% endfor %}
     </div>
 {% endblock content %}

@@ -25,10 +25,10 @@ response = client.label_detection(image=image)
 labels = response.label_annotations
 
 
-#checks if there is a dog in the image
-#returns DOGGO if there is a dog in the image and "No :(" if there isn't
+# checks if there is a dog in the image
+# returns DOGGO if there is a dog in the image and "No :(" if there isn't
 def is_doggo(labels):
-    print('Labels:')
+    print(labels)
     for label in labels:
         if label.description == "dog":
             return "DOGGO"

@@ -28,9 +28,10 @@ def HomeView(request):
 def BasicUploadView(request):
     if request.GET:
         photos_list = Photo.objects.all()
-        return render(request, 'pages/home.html', {'photos': photos_list})
+        return render(request, 'pages/images.html', {'photos': photos_list})
     else:
         form = PhotoForm(request.POST, request.FILES)
+
         if form.is_valid():
             photo = form.save()
             data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url}
