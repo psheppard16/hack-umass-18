@@ -69,7 +69,7 @@ def get_color_name(requested_color):
 # pic_show(file_pic)
 
 
-# returns the RGB values of the colour with the highest fraction, meaning the colour that shows up the most in the image
+# returns the RGB values of the color with the highest fraction, meaning the color that shows up the most in the image
 def detect_properties(path):
     """Detects image properties in the file."""
     from google.cloud import vision
@@ -82,7 +82,6 @@ def detect_properties(path):
 
     response = client.image_properties(image=image)
     props = response.image_properties_annotation
-    print('Properties:')
     maxi = -10
     max_red = 0
     max_green = 0
@@ -97,21 +96,15 @@ def detect_properties(path):
             max_green = color.color.green
             max_blue = color.color.blue
     return max_red, max_green, max_blue
-        # print('fraction: {}'.format(color.pixel_fraction))
-        # print('\tr: {}'.format(color.color.red))
-        # print('\tg: {}'.format(color.color.green))
-        # print('\tb: {}'.format(color.color.blue))
-        # print('\ta: {}'.format(color.color.alpha))
-    #print("\nThis is maximum: {} {} {} {}\n".format(maxi, max_red, max_green, max_blue))
 
 # main function that takes the name of the image and runs all the analysis :) is it a dog? find out!
 def run_doggo_detection(path):
     red, green, blue = detect_properties(path)
-    requested_colour = (red, green, blue)
-    actual_name, closest_name = get_colour_name(requested_colour)
+    requested_color = (red, green, blue)
+    actual_name, closest_name = get_color_name(requested_color)
 
     print("Is your doggo a doggo? {}".format(is_doggo(labels)))
     if actual_name != None:
-        print("Actual colour name:", actual_name, ", or:", closest_name)
+        print("Actual color name:", actual_name, ", or:", closest_name)
     else:
-        print("Colour name:", closest_name)
+        print("Color name:", closest_name)
