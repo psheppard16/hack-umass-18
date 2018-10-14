@@ -24,8 +24,9 @@ image = types.Image(content=content)
 response = client.label_detection(image=image)
 labels = response.label_annotations
 
-#checks if there is a dog in the image
-#returns DOGGO if there is a dog in the image and "No :(" if there isn't
+
+# checks if there is a dog in the image
+# returns DOGGO if there is a dog in the image and "No :(" if there isn't
 def is_doggo(labels):
     print('Labels:')
     for label in labels:
@@ -34,26 +35,27 @@ def is_doggo(labels):
     return "No :("
 
 
-#this function takes the RGB value given from Google API and gives an approximate colour in English
-#such as "red", "cyan" or "navy blue"
-def get_colour_name(requested_colour):
-    def closest_colour(requested_colour):
-        min_colours = {}
+# this function takes the RGB value given from Google API and gives an approximate color in English
+# such as "red", "cyan" or "navy blue"
+def get_color_name(requested_color):
+    def closest_color(requested_color):
+        min_colors = {}
         for key, name in webcolors.css3_hex_to_names.items():
             r_c, g_c, b_c = webcolors.hex_to_rgb(key)
-            rd = (r_c - requested_colour[0]) ** 2
-            gd = (g_c - requested_colour[1]) ** 2
-            bd = (b_c - requested_colour[2]) ** 2
-            min_colours[(rd + gd + bd)] = name
-        return min_colours[min(min_colours.keys())]
+            rd = (r_c - requested_color[0]) ** 2
+            gd = (g_c - requested_color[1]) ** 2
+            bd = (b_c - requested_color[2]) ** 2
+            min_colors[(rd + gd + bd)] = name
+        return min_colors[min(min_colors.keys())]
     try:
-        closest_name = actual_name = webcolors.rgb_to_name(requested_colour)
+        closest_name = actual_name = webcolors.rgb_to_name(requested_color)
     except ValueError:
-        closest_name = closest_colour(requested_colour)
+        closest_name = closest_color(requested_color)
         actual_name = None
     return actual_name, closest_name
 
-#returns the RGB values of the colour with the highest fraction, meaning the colour that shows up the most in the image
+
+# returns the RGB values of the color with the highest fraction, meaning the color that shows up the most in the image
 def detect_properties(path):
     """Detects image properties in the file."""
     from google.cloud import vision
@@ -88,16 +90,17 @@ def detect_properties(path):
         # print('\ta: {}'.format(color.color.alpha))
     #print("\nThis is maximum: {} {} {} {}\n".format(maxi, max_red, max_green, max_blue))
 
-#main function that takes the name of the image and runs all the analysis :) is it a dog? find out!
+
+# main function that takes the name of the image and runs all the analysis :) is it a dog? find out!
 def run_doggo_detection(path):
     red, green, blue = detect_properties(path)
-    requested_colour = (red, green, blue)
-    actual_name, closest_name = get_colour_name(requested_colour)
+    requested_color = (red, green, blue)
+    actual_name, closest_name = get_color_name(requested_color)
 
     print("Is your doggo a doggo? {}".format(is_doggo(labels)))
     if actual_name != None:
-        print("Actual colour name:", actual_name, ", or:", closest_name)
+        print("Actual color name:", actual_name, ", or:", closest_name)
     else:
-        print("Colour name:", closest_name)
+        print("Color name:", closest_name)
 
 run_doggo_detection("doggo_grass.jpg")
