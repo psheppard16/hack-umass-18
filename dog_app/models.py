@@ -31,4 +31,4 @@ def process_photo(sender, instance, **kwargs):
     temp_image = open(os.path.join(BASE_DIR, filename), 'w')
     thumb.save(temp_image, 'JPEG')
 
-    ld.detect_properties(filename)
+    ld.run_doggo_detection(filename)

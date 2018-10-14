@@ -9,19 +9,10 @@
     </head>
 
     <body>
-    {% include "shared/navbar.html" %}
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 sidebar">
-                    {% include "shared/sidebar.html" %}
-                </div>
-                <div class="col-md-9 main">
-                    {#overridden by home#}
-                    {% block content %}
-                    {% endblock content %}
-                </div>
-            </div>
+            {#overridden by home#}
+            {% block content %}
+            {% endblock content %}
         </div>
-    {% include "shared/footer.html" %}
     </body>
 </html>
