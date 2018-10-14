@@ -102,4 +102,20 @@ def run_doggo_detection(path):
         print("Color name:", closest_name)
 
 
-run_doggo_detection("doggo_grass.jpg")
+file_pic = "doggo.jpg"
+run_doggo_detection(file_pic)
+
+# import cv2 as cv
+# from matplotlib import pyplot as plt
+#
+# def pic_show(file_pic):
+#     img = cv.imread(file_pic, 0)
+#     cv.imshow('image', img)
+#     edges = cv.Canny(img, 100, 200)
+#     plt.subplot(121), plt.imshow(img, cmap='gray')
+#     plt.title('Original Image'), plt.xticks([]), plt.yticks([])
+#     plt.subplot(122), plt.imshow(edges, cmap='gray')
+#     plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
+#     plt.show()
+#
+# pic_show(file_pic)
