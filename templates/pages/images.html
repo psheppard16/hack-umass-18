@@ -1,0 +1,13 @@
+{% extends 'shared/base.html' %}
+
+
+{% block content %}
+    <h1><a href="{% url 'home' %}">Multiuploader</a></h1>
+    <br />
+    <h2>Images:</h2>
+    <div class="photos">
+    {% for item in items %}
+        <img src="{{ item.url }}">
+    {% endfor %}
+    </div>
+{% endblock content %}

@@ -45,6 +45,7 @@ $ source .venv/bin/activate
 
 Install pip requirements:
 $ pip3 install -r requirements.txt
+$ pip3 install tensorflow
 
 Install node:
 $ curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -

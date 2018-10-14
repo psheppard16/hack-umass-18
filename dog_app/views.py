@@ -5,18 +5,37 @@ from dog_app.models import *
 from dog_app.forms import *
 from dog_app.serializers import *
 from django.urls import reverse
+from django.views import View
+
 
 import logging
 log = logging.getLogger('dog')
 
 ###########################################################################
-#                             Dog VIEWS                           #
+#                             Dog VIEWS                                   #
 #                                                                         #
 ###########################################################################
 
 
-# def HomeView(request):
-#     context = {'title': "Home",
-#                'user': request.user
-#                }
-#     return render(request, 'pages/home.html', context)
+def HomeView(request):
+    context = {'title': "Home",
+               'user': request.user
+               }
+    return render(request, 'pages/home.html', context)
+
+
+
+
+class BasicUploadView(View):
+    def get(self, request):
+        photos_list = Photo.objects.all()
+        return render(self.request, 'photos/basic_upload/index.html', {'photos': photos_list})
+
+    def post(self, request):
+        form = PhotoForm(self.request.POST, self.request.FILES)
+        if form.is_valid():
+            photo = form.save()
+            data = {'is_valid': True, 'name': photo.file.name, 'url': photo.file.url}
+        else:
+            data = {'is_valid': False}
+        return JsonResponse(data)
