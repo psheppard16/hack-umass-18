@@ -114,6 +114,8 @@ gulp.task("fonts", ["clean-fonts"], () => {
 		.pipe(gulp.dest("static/css/fonts"));
     gulp.src("assets/fonts/**/*")
 		.pipe(gulp.dest("static/css/fonts"));
+    gulp.src("assets/fonts/*.ttf")
+		.pipe(gulp.dest("static/css/fonts"));
 
 	// font-awesome
     gulp.src("node_modules/font-awesome/fonts/*")

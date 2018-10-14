@@ -19,6 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
 STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 ADMINS = [('Preston Sheppard', 'psheppard16@gmail.com')]
 
 # Quick-start development settings - unsuitable for production

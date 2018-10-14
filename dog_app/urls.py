@@ -3,6 +3,8 @@ from django.conf.urls import include, url
 from rest_framework import routers
 from dog_app.api import *
 from dog_app.views import *
+from . import views
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIRS = (
@@ -17,5 +19,7 @@ dog_api_patterns = [
 ]
 
 urlpatterns = [
-    # url(r'^home', HomeView, name="home"),
+    url(r'^home/', HomeView, name="home"),
+    url(r'^basic-upload/$', views.BasicUploadView.as_view(), name='basic_upload'),
 ]
+
